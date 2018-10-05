@@ -43,7 +43,6 @@ class RotateMatrixModel {
         String res = "Initial matrix size of [" + value + "][" + value + "] : \n";
 
         int[][] initMatrix = makeInitialMatrix();
-        int[][] resMatrix = rotateMatrix(initMatrix);
 
         for (int i = 0; i < initMatrix.length; i++) {
             for (int j = 0; j < initMatrix[i].length; j++) {
@@ -53,13 +52,14 @@ class RotateMatrixModel {
         }
         res += "\nRotated matrix : \n";
 
+        int[][] resMatrix = rotateMatrix(initMatrix);
+
         for (int i = 0; i < resMatrix.length; i++) {
             for (int j = 0; j < resMatrix[i].length; j++) {
                 res += resMatrix[i][j] + "\t";
             }
             res += "\n";
         }
-
 
         return res;
     }
