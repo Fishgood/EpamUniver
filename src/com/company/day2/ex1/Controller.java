@@ -1,18 +1,18 @@
 package com.company.day2.ex1;
 
-class BinaryController {
-    private BinaryModel model;
-    private BinaryView view;
+class Controller {
+    private Model model;
+    private View view;
 
-    BinaryController(BinaryModel model, BinaryView view) {
+    Controller(Model model, View view) {
         this.model = model;
         this.view = view;
     }
 
     void calculate() {
+        model.setOption(InputUtility.inputOptionOfCalculating(view, model.numOfOptions));
         model.setValue(InputUtility.inputIntValueWithScanner(view));
-        model.calculateBinary(1);
+        model.calculate();
         view.printMessageAndResult(view.OUR_INT, model.getValue());
-
     }
 }

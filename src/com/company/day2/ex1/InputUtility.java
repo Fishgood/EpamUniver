@@ -5,8 +5,18 @@ import java.util.Scanner;
 class InputUtility {
     private static Scanner sc = new Scanner(System.in);
 
-    static int inputIntValueWithScanner(BinaryView view) {
+    static int inputOptionOfCalculating(View view, int option) {
+        view.printMessage(view.CHOICE_RES_DATA);
+        while (!sc.hasNextInt() && !(sc.nextInt() > 0 && sc.nextInt() <= option)) {
+            view.printMessage(view.WRONG_INPUT_INT_DATA +
+                    view.CHOICE_RES_DATA);
 
+            sc.next();
+        }
+        return sc.nextInt();
+    }
+
+    static int inputIntValueWithScanner(View view) {
         view.printMessage(view.INPUT_INT_DATA);
         while (!sc.hasNextInt()) {
             view.printMessage(view.WRONG_INPUT_INT_DATA +

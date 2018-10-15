@@ -11,7 +11,14 @@ class PerfectNumView {
         System.out.print(message);
     }
 
-    void printMessageAndResult(String message, int value) {
-        System.out.println(message + value);
+    void printMessageAndResult(String message, int[] value) {
+
+        System.out.print(message);
+
+        for (int i = 0; i < value.length - 1; i++) {
+            if (value[i] == 0)
+                break;
+            System.out.print(value[i] + " ");
+        }
     }
 }

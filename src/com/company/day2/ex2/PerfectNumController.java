@@ -11,8 +11,7 @@ class PerfectNumController {
 
     void calculate() {
         model.setValue(InputUtility.inputIntValueWithScanner(view));
-        model.calculatePerfNum(1);
-        view.printMessageAndResult(view.OUR_INT, model.getValue());
+        view.printMessageAndResult(view.OUR_INT, model.calculatePerfNum());
 
     }
 }
