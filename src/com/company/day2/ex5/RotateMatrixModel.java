@@ -3,7 +3,6 @@ package com.company.day2.ex5;
 class RotateMatrixModel {
 
     private int value;
-    private int[][] initialMatrix;
 
     int getValue() {
         return value;
@@ -13,12 +12,8 @@ class RotateMatrixModel {
         this.value = value;
     }
 
-    public int[][] getInitialMatrix() {
-        return initialMatrix;
-    }
-
     int[][] makeInitialMatrix(){
-        initialMatrix = new int[value][value];
+        int[][] initialMatrix = new int[value][value];
         for (int i = 0; i < initialMatrix.length; i++) {
             for (int j = 0; j < initialMatrix[i].length; j++) {
                 initialMatrix[i][j] = (-100) + (int) (Math.random() * 100);
@@ -48,7 +43,6 @@ class RotateMatrixModel {
         String res = "Initial matrix size of [" + value + "][" + value + "] : \n";
 
         int[][] initMatrix = makeInitialMatrix();
-        int[][] resMatrix = rotateMatrix(initMatrix);
 
         for (int i = 0; i < initMatrix.length; i++) {
             for (int j = 0; j < initMatrix[i].length; j++) {
@@ -58,13 +52,14 @@ class RotateMatrixModel {
         }
         res += "\nRotated matrix : \n";
 
+        int[][] resMatrix = rotateMatrix(initMatrix);
+
         for (int i = 0; i < resMatrix.length; i++) {
             for (int j = 0; j < resMatrix[i].length; j++) {
                 res += resMatrix[i][j] + "\t";
             }
             res += "\n";
         }
-
 
         return res;
     }
