@@ -1,11 +1,11 @@
-package com.company.day2.ex2;
+package com.company.task1.ex3;
 
 import java.util.Scanner;
 
 class InputUtility {
     private static Scanner sc = new Scanner(System.in);
 
-    static int inputIntValueWithScanner(PerfectNumView view) {
+    static int inputIntValueWithScanner(PyramidView view) {
 
         view.printMessage(view.INPUT_INT_DATA);
         while (!sc.hasNextInt()) {

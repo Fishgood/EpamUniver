@@ -1,4 +1,4 @@
-package com.company.day2.ex1;
+package com.company.task1.ex1;
 
 public class Main {
 

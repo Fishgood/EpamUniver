@@ -1,4 +1,4 @@
-package com.company.day2.ex3;
+package com.company.task1.ex3;
 
 class PyramidController {
     private PyramidModel model;

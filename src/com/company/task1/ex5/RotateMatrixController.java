@@ -1,4 +1,4 @@
-package com.company.day2.ex5;
+package com.company.task1.ex5;
 
 class RotateMatrixController {
     private RotateMatrixModel model;
@@ -10,8 +10,9 @@ class RotateMatrixController {
     }
 
     void calculate() {
-        model.setValue(InputUtility.inputIntValueWithScanner(view));
-        view.printMessageAndResult(view.OUR_INT, model.resultMatrixs());
-
+        view.printMessageAndResult(view.INIT_ARR,
+                model.makeInitialMatrix(InputUtility.inputIntValueWithScanner(view)));
+        model.rotateMatrix();
+        view.printMessageAndResult(view.OUR_INT, model.getMatrix());
     }
 }

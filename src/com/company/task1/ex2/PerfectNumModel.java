@@ -1,7 +1,6 @@
-package com.company.day2.ex2;
+package com.company.task1.ex2;
 
 import java.util.ArrayList;
-import java.util.Stack;
 
 class PerfectNumModel {
 

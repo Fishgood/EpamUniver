@@ -1,6 +1,4 @@
-package com.company.day2.ex3;
-
-import java.util.ArrayList;
+package com.company.task1.ex3;
 
 class PyramidModel {
 
@@ -20,13 +18,13 @@ class PyramidModel {
 
             for (int i = value; i > 0; i--) {
 
-                for (int j = 0; j < i * 2; j++) //System.out.print(" ");
+                for (int j = 0; j < i * 2; j++)
                     res += " ";
 
-                for (int j = 1; j <= count; j++) //System.out.print(j + " ");
+                for (int j = 1; j <= count; j++)
                     res += j + " ";
 
-                for (int j = count - 1; j > 0; j--) //System.out.print(j + " ");
+                for (int j = count - 1; j > 0; j--)
                     res += j + " ";
 
                 count++;

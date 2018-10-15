@@ -1,11 +1,11 @@
-package com.company.day2.ex5;
+package com.company.task1.ex3;
 
-class RotateMatrixView {
+class PyramidView {
     final String INPUT_INT_DATA =
-            "Enter size of matrix = ";
+            "Enter height of pyramid (1 to 9) = ";
     final String WRONG_INPUT_INT_DATA =
             "Wrong input! Repeat please! ";
-    final String OUR_INT = "Result = \n";
+    final String OUR_INT = "Result = ";
 
     void printMessage(String message) {
         System.out.print(message);

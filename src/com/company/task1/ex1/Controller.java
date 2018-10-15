@@ -1,4 +1,4 @@
-package com.company.day2.ex1;
+package com.company.task1.ex1;
 
 class Controller {
     private Model model;
@@ -11,7 +11,7 @@ class Controller {
 
     void calculate() {
         model.setOption(InputUtility.inputOptionOfCalculating(view, model.numOfOptions));
-        model.setValue(InputUtility.inputIntValueWithScanner(view));
+        model.setValue(Integer.toString(InputUtility.inputIntValueWithScanner(view)));
         model.calculate();
         view.printMessageAndResult(view.OUR_INT, model.getValue());
     }

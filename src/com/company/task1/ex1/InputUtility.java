@@ -1,4 +1,4 @@
-package com.company.day2.ex1;
+package com.company.task1.ex1;
 
 import java.util.Scanner;
 
@@ -7,10 +7,9 @@ class InputUtility {
 
     static int inputOptionOfCalculating(View view, int option) {
         view.printMessage(view.CHOICE_RES_DATA);
-        while (!sc.hasNextInt() && !(sc.nextInt() > 0 && sc.nextInt() <= option)) {
+        while (!sc.hasNextInt()) {
             view.printMessage(view.WRONG_INPUT_INT_DATA +
                     view.CHOICE_RES_DATA);
-
             sc.next();
         }
         return sc.nextInt();
