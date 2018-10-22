@@ -11,10 +11,10 @@ public class Controller {
 
     public void run(){
         model.setToys(Data.getToys());
-        view.printToys("All toys: ", model.getToys());
-        view.printToys("Sort toys by price: ", model.sortByPrice());
-        view.printResult("Total price: ", model.getTotalPrice());
-        view.printToys("Toys with year between 2015 and 2018: ", model.getToysBetweenYears(2015, 2018));
+        view.printToys(View.ALL_TOYS, model.getToys());
+        view.printToys(View.SORT_BY_PRICE, model.sortByPrice());
+        view.printResult(View.TOTAL_PRICE, model.getTotalPrice());
+        view.printToys(View.PRICE_BETWEEN_YEARS, model.getToysBetweenYears(2015, 2018));
 
     }
 }

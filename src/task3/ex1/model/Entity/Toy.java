@@ -4,15 +4,15 @@ public abstract class Toy {
     private String name;
     private String colour;
     private String producer;
-    private String size;
+    private String weight;
     private int price;
     private int year;
 
-    public Toy(String name, String colour, String producer, String size, int price, int year) {
+    public Toy(String name, String colour, String producer, String weight, int price, int year) {
         this.name = name;
         this.colour = colour;
         this.producer = producer;
-        this.size = size;
+        this.weight = weight;
         this.price = price;
         this.year = year;
     }
@@ -33,8 +33,8 @@ public abstract class Toy {
         return producer;
     }
 
-    public String getSize() {
-        return size;
+    public String getWeight() {
+        return weight;
     }
 
     public int getPrice() {
@@ -55,7 +55,7 @@ public abstract class Toy {
                 "name='" + name + '\'' +
                 ", colour='" + colour + '\'' +
                 ", producer='" + producer + '\'' +
-                ", size='" + size + '\'' +
+                ", weight='" + weight + '\'' +
                 ", price=" + price + " $" +
                 ", year=" + year +
                 '}';

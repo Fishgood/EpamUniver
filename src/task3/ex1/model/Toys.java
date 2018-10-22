@@ -5,14 +5,14 @@ import task3.ex1.model.Entity.Toy;
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class Toys {
-    private Toy[] toys;
+public class Toys <T extends Toy>{
+    private T[] toys;
 
-    public Toy[] getToys() {
+    public T[] getToys() {
         return toys;
     }
 
-    public void setToys(Toy[] toys) {
+    public void setToys(T[] toys) {
         this.toys = toys;
     }
 

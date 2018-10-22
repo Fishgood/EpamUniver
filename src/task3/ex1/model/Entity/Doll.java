@@ -5,9 +5,9 @@ public class Doll extends Toy{
     private String haircut;
     private String material;
 
-    public Doll(String name, String colour, String producer, String size, int price, int year, String gender,
+    public Doll(String name, String colour, String producer, String weight, int price, int year, String gender,
                 String haircut, String material) {
-        super(name, colour, producer, size, price, year);
+        super(name, colour, producer, weight, price, year);
         this.gender = gender;
         this.haircut = haircut;
         this.material = material;

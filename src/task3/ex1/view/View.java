@@ -1,6 +1,6 @@
 package task3.ex1.view;
 
-public class View {
+public class View implements Inforamtion{
 
     public void printToys(String message, Object[] objects) {
         System.out.println(message);

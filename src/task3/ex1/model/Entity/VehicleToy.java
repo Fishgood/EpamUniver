@@ -5,9 +5,9 @@ public class VehicleToy extends Toy {
     private int vehicleSize;
     private boolean toRideByChild;
 
-    public VehicleToy(String name, String colour, String producer, String size, int price, int year,
+    public VehicleToy(String name, String colour, String producer, String weight, int price, int year,
                       int numOfVehicle, int vehicleSize, boolean toRideByChild) {
-        super(name, colour, producer, size, price, year);
+        super(name, colour, producer, weight, price, year);
         this.numOfVehicle = numOfVehicle;
         this.vehicleSize = vehicleSize;
         this.toRideByChild = toRideByChild;

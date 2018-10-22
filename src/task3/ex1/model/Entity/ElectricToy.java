@@ -7,9 +7,9 @@ public class ElectricToy extends Toy{
     private int capacityOfBattary;
     private double displaySize;
 
-    public ElectricToy(String name, String colour, String producer, String size, int price, int year,
+    public ElectricToy(String name, String colour, String producer, String weight, int price, int year,
                        boolean isWireless, boolean forVideoGames, int voltage, int capacityOfBattary, double displaySize) {
-        super(name, colour, producer, size, price, year);
+        super(name, colour, producer, weight, price, year);
         this.isWireless = isWireless;
         this.forVideoGames = forVideoGames;
         this.voltage = voltage;
