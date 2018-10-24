@@ -8,11 +8,11 @@ import java.util.ArrayList;
 
 public class Actions {
 
-    public static void initItem(ArrayList<Item> items, int type, int paramNum, Field... paramName){
+    public static void initItem(ArrayList<Item> items, int type, Field... paramName) {
 
-        ArrayList<String> params = InputItem.inputParameter(paramNum, paramName);
+        ArrayList<String> params = InputItem.inputParameter(paramName.length, paramName);
 
-        switch (type){
+        switch (type) {
             case 1:
                 items.add(new Clothes(params.get(0), Double.parseDouble(params.get(1)),
                         Integer.parseInt(params.get(2)), params.get(3)));

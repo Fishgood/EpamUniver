@@ -3,7 +3,7 @@ package task3.ex2.view;
 
 import java.util.ArrayList;
 
-public class View<T> implements information {
+public class View<T> implements Information {
 
     public static void printMessage(String message) {
         System.out.println(message);

@@ -1,6 +1,6 @@
-package task3.ex2;
+package task5.ex1;
 
-import task3.ex2.controller.Controller;
+import task5.ex1.controller.Controller;
 
 public class Main {
 

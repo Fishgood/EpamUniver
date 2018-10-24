@@ -1,7 +1,6 @@
 package task3.ex2.view;
 
-public interface information {
-
+public interface Information {
     String MAIN_MENU = "\nMain menu (select option):\n" +
             "1 show all departments;\n" +
             "2 sort departments;\n" +

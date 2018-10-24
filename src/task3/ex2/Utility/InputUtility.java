@@ -8,17 +8,21 @@ public class InputUtility<T> {
 
     private static Scanner scanner = new Scanner(System.in);
 
+    public static String inputString(String message){
+        View.printMessage(message);
+        return scanner.next().trim();
+    }
     public static String strValInp(String message) {
         View.printMessage(message);
-        String value;
-        while (true) {
+        //String value;
+        /*while (true) {
             value = scanner.next();
             if (value.length() == 0) {
                 View.printMessage(View.WRONG_INPUT);
             } else
                 break;
-        }
-        return value;
+        }*/
+        return scanner.nextLine().trim();
     }
 
 
