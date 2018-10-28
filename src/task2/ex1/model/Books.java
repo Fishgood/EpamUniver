@@ -17,7 +17,10 @@ public class Books {
     }
 
     public Book[] getByAuthor(String author){
-        Book[] temp = new Book[books.length];
+        return (Book[]) Arrays.stream(books)
+                .filter(book -> book.getAuthor().equals(author))
+                .toArray();
+        /*Book[] temp = new Book[books.length];
 
         int counter = 0;
         for (Book book : books) {
@@ -25,23 +28,21 @@ public class Books {
                 temp[counter++] = book;
         }
 
-        return Arrays.copyOf(temp, counter);
+        return Arrays.copyOf(temp, counter);*/
     }
 
     public Book[] getByPublisher(String publisher){
-        Book[] temp = new Book[books.length];
+        return (Book[]) Arrays.stream(books)
+                .filter(book -> book.getPublisher().equals(publisher))
+                .toArray();
 
-        int counter = 0;
-        for (Book book : books) {
-            if (book.getPublisher().equals(publisher))
-                temp[counter++] = book;
-        }
-
-        return Arrays.copyOf(temp, counter);
     }
 
     public Book[] getByYear(int year){
-        Book[] temp = new Book[books.length];
+        return (Book[]) Arrays.stream(books)
+                .filter(book -> book.getYear() >= year)
+                .toArray();
+        /*Book[] temp = new Book[books.length];
 
         int counter = 0;
         for (Book book : books){
@@ -50,13 +51,16 @@ public class Books {
             }
         }
 
-        return Arrays.copyOf(temp, counter);
+        return Arrays.copyOf(temp, counter);*/
     }
 
-    public Book[] sortByPublisher(){
-        Book[] temp = Arrays.copyOf(books, books.length);
-        Arrays.sort(temp, Comparator.comparing(Book::getPublisher));
-        return temp;
+    public void sortByPublisher(){
+        books = (Book[]) Arrays.stream(books)
+                .sorted(Comparator.comparing(Book::getPublisher))
+                .toArray();
+        /*Book[] temp = Arrays.copyOf(books, books.length);
+        Arrays.sort(temp, Comparator.comparing(Book::getPublisher));*/
+        //return temp;
     }
 
 

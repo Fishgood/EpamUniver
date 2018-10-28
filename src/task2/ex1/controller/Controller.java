@@ -15,7 +15,8 @@ public class Controller {
         view.printBooks("Get books by author - Celia Rees: ", model.getByAuthor("Celia Rees"));
         view.printBooks("Get books by publisher - Ebook: ", model.getByPublisher("Ebook"));
         view.printBooks("Get books after 2004: ", model.getByYear(2004));
-        view.printBooks("Get filtered books by publisher: ", model.sortByPublisher());
+        model.sortByPublisher();
+        view.printBooks("Get filtered books by publisher: ",model.getBooks());
     }
 
 
