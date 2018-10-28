@@ -17,26 +17,26 @@ public class Books {
     }
 
     public Book[] getByAuthor(String author){
-        return (Book[]) Arrays.stream(books)
+        return Arrays.stream(books)
                 .filter(book -> book.getAuthor().equals(author))
-                .toArray();
+                .toArray(Book[]::new);
     }
 
     public Book[] getByPublisher(String publisher){
-        return (Book[]) Arrays.stream(books)
+        return Arrays.stream(books)
                 .filter(book -> book.getPublisher().equals(publisher))
-                .toArray();
+                .toArray(Book[]::new);
     }
 
     public Book[] getByYear(int year){
-        return (Book[]) Arrays.stream(books)
+        return Arrays.stream(books)
                 .filter(book -> book.getYear() >= year)
-                .toArray();
+                .toArray(Book[]::new);
     }
 
     public void sortByPublisher(){
-        books = (Book[]) Arrays.stream(books)
+        books = Arrays.stream(books)
                 .sorted(Comparator.comparing(Book::getPublisher))
-                .toArray();
+                .toArray(Book[]::new);
     }
 }
