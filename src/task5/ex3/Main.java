@@ -1,14 +1,8 @@
 package task5.ex3;
 
-import task2.ex1.view.BooksView;
-
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class Main {
 
@@ -39,7 +33,7 @@ public class Main {
         return hashMap;
     }
 
-    public static String inputStringValue(){
+    private static String inputStringValue(){
         Scanner sc = new Scanner(System.in);
         while (true) {
             if (sc.hasNext()){
@@ -52,24 +46,13 @@ public class Main {
 
     public static void main(String... args) throws IOException {
 
-        Translator translator = new Translator(dataSet());
-        /*BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        Translator translator = new Translator();
+        translator.setDictionary(dataSet());
 
-        String str;
-        System.out.println("Enter string. Enter '.' to exit");
-        do {
-            str = br.readLine();
-            System.out.println(str);
-        } while (!str.toLowerCase().equals("."));
-
-        Scanner sc = new Scanner(System.in);
-        StringBuilder sb = new StringBuilder(sc.nextLine());*/
-
-        //Pattern p = Pattern.compile("^[A-Za-z]{1}([a-z]{0,16})?$");
-        //Matcher m = p.matcher();
-
+        translator.addWord("count", "подсчитывать");
 
         String str = inputStringValue();
+        //System.out.println("start");
 
         System.out.println(translator.translateString(str));
 
