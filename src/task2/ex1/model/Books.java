@@ -28,7 +28,7 @@ public class Books {
                 .toArray(Book[]::new);
     }
 
-    public Book[] getByYear(int year){
+    public Book[] getAfterYear(int year){
         return Arrays.stream(books)
                 .filter(book -> book.getYear() >= year)
                 .toArray(Book[]::new);

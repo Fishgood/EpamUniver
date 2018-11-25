@@ -8,9 +8,9 @@ import java.util.ArrayList;
 
 public class Actions {
 
-    public static void initItem(ArrayList<Item> items, int type, Field... paramName) {
+    public static void initItem(ArrayList<Item> items, int type, Object fields) {
 
-        ArrayList<String> params = InputItem.inputParameter(paramName.length, paramName);
+        ArrayList<String> params = InputItem.inputParameter(fields);
 
         switch (type) {
             case 1:

@@ -5,7 +5,6 @@ import task3.ex2.model.Entity.*;
 import task3.ex2.model.Shop;
 import task3.ex2.view.View;
 
-import java.lang.reflect.Field;
 import java.util.*;
 
 public class Menu<T> {
@@ -15,9 +14,10 @@ public class Menu<T> {
     private Shop shop = new Shop("Adidas");
 
     public void menu() {
-        View.printMessage(View.MAIN_MENU);
-        int option;
+
         while (true) {
+            View.printMessage(View.MAIN_MENU);
+            int option;
             View.printMessage("Select next option: ");
             option = scanner.nextInt();
             switch (option) {
@@ -73,7 +73,7 @@ public class Menu<T> {
                         do {
                             num = enterItemType();
                         } while (!(num > 0 && num < 5));
-                        Actions.initItem(shop.getItems(depIndex), num, getFields(num));
+                        Actions.initItem(shop.getItems(depIndex), num, getClass(num));
                         View.printMessage("Want to add one more item?(y/n): ");
                         ex = scanner.next();
                     } while (!ex.equals("n"));
@@ -108,20 +108,19 @@ public class Menu<T> {
         }
     }
 
-    private Field[] getFields(int num) {
-        View.printMessage("Pick type (Clothes, Electronics, Shoes or Stationery)\n");
+    private Object getClass(int num) {
+        //View.printMessage("Pick type (Clothes, Electronics, Shoes or Stationery)\n");
 
         switch (num) {
             case 1:
-                return Clothes.class.getDeclaredFields();
+                return Clothes.class;
             case 2:
-                return Electronics.class.getDeclaredFields();
+                return Electronics.class;
             case 3:
-                return Shoes.class.getDeclaredFields();
+                return Shoes.class;
             case 4:
-                return Stationery.class.getDeclaredFields();
+                return Stationery.class;
         }
-
         return null;
     }
 }

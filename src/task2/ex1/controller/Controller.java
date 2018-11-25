@@ -21,13 +21,16 @@ public class Controller {
                     view.printBooks(BooksView.ALL_BOOKS, model.getBooks());
                     break;
                 case 2:
-                    view.printBooks("List by author: \n", model.getByAuthor(inputUtility.inputStringValue()));
+                    view.printBooks("List by author: \n",
+                            model.getByAuthor(inputUtility.inputStringValue()));
                     break;
                 case 3:
-                    view.printBooks("List by publisher: \n", model.getByPublisher(inputUtility.inputStringValue()));
+                    view.printBooks("List by publisher: \n",
+                            model.getByPublisher(inputUtility.inputStringValue()));
                     break;
                 case 4:
-                    view.printBooks("List after some: \n", model.getByYear(inputUtility.inputInt()));
+                    view.printBooks("List after some: \n",
+                            model.getAfterYear(inputUtility.inputInt()));
                     break;
                 case 5:
                     model.sortByPublisher();

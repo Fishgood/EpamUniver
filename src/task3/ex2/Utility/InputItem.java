@@ -11,23 +11,24 @@ public class InputItem {
 
     private static Scanner scanner = new Scanner(System.in);
 
-    public static ArrayList<String> inputParameter(int paramNum, Field... paramName) {
+    public static ArrayList<String> inputParameter(Object fields) {
         View.printMessage("Enter next params: ");
         String line = null;
         ArrayList<String> inputsArray = new ArrayList<>();
-        Field[] temp = Item.class.getDeclaredFields();
+        Field[] superClass = fields.getClass().getSuperclass().getDeclaredFields();
+        Field[] subClass = fields.getClass().getDeclaredFields();
+        //Field[] temp = Item.class.getDeclaredFields();
 
         do {
             if (inputsArray.size() < 2) {
-                View.printMessage("Enter " + temp[inputsArray.size()].getName());
+                View.printMessage("Enter " + superClass[inputsArray.size()].getName());
             } else
-                View.printMessage("Enter " + paramName[inputsArray.size() - 2].getName());
-
+                View.printMessage("Enter " + subClass[inputsArray.size() - 2].getName());
 
             line = scanner.next();
             inputsArray.add(line.trim());
 
-        } while (inputsArray.size() != paramNum + 2);
+        } while (inputsArray.size() != (superClass.length + subClass.length));
 
         return inputsArray;
     }
